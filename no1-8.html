@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Variabel dalam java</title>
+    <script>
+      // Membuat variabel
+      var nama = "Petani Kode";
+      var visitorCount = 50322;
+      var isActive = true;
+      var url = "https://www.petanikode.com";
+      var articleCount = 25;
+
+      // Mengisi ulang variabel
+      visitorCount = 1010;
+
+      // Menghapus variabel
+      delete articleCount;
+
+      // Menampilkan variabel ke jendela dialog (alert)
+      // alert("Selamat datang di " + name + " !");
+
+      // Menampilkan variabel ke dalam HTML
+      document.write("Nama Situs : " + nama + "<br>");
+      document.write("Jumlah Pengunjung : " + visitorCount + "<br>");
+      document.write("Status Aktif : " + isActive + "<br>");
+      document.write("Alamat URL : " + url + "<br>");
+      document.write("Jumlah artikel : " + articleCount + "<br>");
+
+      // Dialog confirm
+      function listen() {
+        var yakin = confirm("Apakah anda yakin untuk pergi dari laman ini?");
+        if (yakin) {
+          location.assign("https://youtu.be/Ue298HwJiaY");
+        } else {
+          jawab("Baiklah kalau tidak jadi.");
+        }
+      }
+
+      // Dialog prompt
+      function introduce() {
+        var name = prompt("What is your name?", "Ami");
+        jawab(`Hello ${name}! Nice to meet you!`);
+      }
+
+      // Tampilkan teks
+      function jawab(teks) {
+        var jawaban = document.getElementById("jawaban");
+        jawaban.innerHTML = teks;
+      }
+    </script>
+  </head>
+  <body>
+    <p><b>Jawaban : </b></p>
+    <q id="jawaban"></q>
+    <br /><br /><br />
+    <button onclick="alert('Button clicked!')">Alert Button</button>
+    <br /><br />
+    <button onclick="listen()">Listen to [I'm a mess] acoustic ver.</button>
+    <br /><br />
+    <button onclick="introduce()">Introduce Yourself</button>
+    <br /><br />
+  </body>
+</html>
